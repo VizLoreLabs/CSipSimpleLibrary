@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 19
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        //applicationId "com.csipsimple"
+        minSdkVersion 11
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    sourceSets{
+        main{
+            jni.srcDirs=[]
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:19.1.+'
+}
